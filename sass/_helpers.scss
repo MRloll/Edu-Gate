@@ -7,6 +7,14 @@ $minMedium: "(min-width: 992px)";
 $minLarge: "(min-width: 1200px)";
 
 
+//COLORS
+$firstColor: #110133;
+$secColor: #86bc42;
+$thirdColor: #4dd599;
+$fourthColor: #ffdc34;
+
+
+
 //OVERLAY
 @mixin overlay($color) {
     position: absolute;

@@ -1,0 +1,200 @@
+@import "_helpers.scss";
+@import "_layout.scss";
+
+
+/*
+=======================
+===== global style ====
+=======================
+*/
+a {
+    color: inherit;
+    &:hover{
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+
+
+body {
+    height: 2000px;
+}
+
+
+/*
+=======================
+===== start header ====
+=======================
+*/
+header {
+    width: 100%;
+    color: #fff;
+    line-height: 50px;
+    font-size: 13px;
+    .top-nav {
+        /*
+        =======================
+        ===== start top-nav ====
+        =======================
+        */
+        background-color: $firstColor;
+        i:hover, a:hover, span:hover{
+            color: $thirdColor;
+            @extend %transition; 
+        }
+        .contact {
+            div {
+                i{
+                    color: $thirdColor;
+                    margin-right: 7px;;
+                }
+                display: inline-block;
+                margin-right: 30px;
+            }
+        }
+        .social {
+            a:not(:last-of-type){
+                margin-right: 20px;
+            }
+        }
+    
+    }
+    nav {
+        /*
+        =======================
+        ===== start header ====
+        =======================
+        */
+        width: 100%;
+        background-color: #fff;
+        @include prefixer(box-shadow, 3px 0 7px rgba(0, 0, 0, 0.3), webkit moz ms o);
+        .container {
+            height: 100%;
+            .row {
+                position: relative;
+                .brand {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        @extend %transition;
+                    }
+                }
+                .nav-links {
+                    position: static;                    
+                    ul {
+                        position: relative;
+                        li.link {
+                            float: right;
+                            padding: 30px 0;
+                            font-size: 16px;
+                            display: inline-block;
+                            color: black;
+                            text-transform: uppercase !important;
+                            margin-left: 20px;
+                            position: relative;
+                            font-style: normal;
+                            font-variant: normal;
+                            text-rendering: auto;
+                            cursor: pointer;
+                            @extend %transition;
+                            &.active {
+                                color: $secColor;
+                                font-weight: bold;
+                            }
+                            &:hover, &.active{
+                                color: $secColor;
+                                &::before {
+                                    width: 100%;
+                                }
+                            }
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                width: 0;
+                                height: 5px;
+                                background-color: $secColor;
+                                @extend %transition;
+                            }
+                            .box {
+                                display: none;
+                                right: 0;
+                                padding-right: 20px;
+                                position: absolute;
+                                min-width: 200px;
+                                color: black;
+                                background-color: white;
+                                border-bottom-left-radius: 3px;
+                                border-bottom-right-radius: 3px;
+                                border-bottom: 5px solid $secColor;
+                                z-index: 1;
+                                @include prefixer(box-shadow, 0px 6px 14px 0px rgba(0, 0, 0, 0.3), webkit moz ms o);
+                                ul {
+                                    li {
+                                        @extend %transition;
+                                        &:hover{
+                                            padding-right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @media #{$minMedium} {
+                        display: block !important;
+                    }
+                    @media #{$maxSmall} {
+                        @include prefixer(box-shadow, 0px 6px 14px 0px rgba(0, 0, 0, 0.3), webkit moz ms o);
+                        display: none;
+                        position: absolute;
+                        top: 50px;
+                        right: 0;
+                        background: white;
+                        ul {
+                            height: 100%;
+                            width: 100%;
+                            float: right;
+                            li.link {
+                                padding: 0 !important;
+                                margin: 0;
+                                display: block;
+                                float: none;
+                                &:not(:last-of-type) {
+                                    border-bottom: 1px solid #dedede;
+                                }
+                                &::before{
+                                    height: 0;
+                                }
+                                a {
+                                    i {
+                                        float: left;
+                                        position: relative;
+                                        top: 19px;
+                                    }
+                                }
+                                .box {
+                                    position: relative;
+                                    border-bottom: none;
+                                    @include prefixer(box-shadow, none, webkit moz ms o);
+                                }
+                            }    
+                        }
+                    }
+
+                }
+                .bars {
+                    display: none;
+                    color: $secColor;
+                    font-size: 30px;
+                    cursor: pointer;
+                    @media #{$maxSmall} {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+    }
+}
