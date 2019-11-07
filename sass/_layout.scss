@@ -29,12 +29,6 @@ ul {
     list-style: none;
 }
 
-/*************
-    section
-*************/
-section {
-    padding: 100px 0;
-}
 
 /*************
     a (link)
@@ -49,4 +43,33 @@ a {
 
 .capitlize {
     text-transform: uppercase;
+}
+
+/*************
+    button
+*************/
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    background:$fourthColor ;
+    @extend %transition;
+    border-radius: 4px;
+    color: black;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -ms-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -ms-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+
+    &:hover {
+        background: $secColor;
+        color: white;
+        @include prefixer(box-shadow, 0px 0px 6px 0px black, webkit moz ms o);
+    }
 }
