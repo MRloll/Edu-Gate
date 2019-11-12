@@ -6,10 +6,12 @@ html
         meta(name="keywords" content="HTML,CSS,XML,JavaScript")
         meta(name="author" content="MR. Loll")
         title Tinker
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Cairo&display=swap")
         link(rel="stylesheet" href="css/all.min.css" type="text/css")
         link(rel="stylesheet" href="css/bootstrap.min.css" type="text/css")
         link(rel="stylesheet" href="css/animate.css" type="text/css")
         link(rel="stylesheet" href="css/slick.css" type="text/css")
+        link(rel="stylesheet" href="css/jquery.fancybox.min.css" type="text/css")
         link(rel="stylesheet" href="css/app.css" type="text/css")
     body
         //**************************
@@ -23,17 +25,17 @@ html
                     .row
                         .contact.col-12.col-lg-6.text-center.text-lg-left
                             .mail                            
-                                a(href="mailto:walidelloll2018@gmail.com") <i class="far fa-envelope"></i> walidelloll2018@gmail.com
+                                a(href="mailto:walidelloll2018@gmail.com") #[i(class="far fa-envelope")] walidelloll2018@gmail.com
                             .phone
-                                <i class="fas fa-phone"></i>
+                                i(class="fas fa-phone")
                                 span +201005037275
                         .social.col-12.col-lg-6.text-center.text-lg-right
-                            <a href="http://facebook.com" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="http://google.com" class="facebook" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="http://twitter.com" class="facebook" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="http://dribble.com" class="facebook" target="_blank"><i class="fas fa-basketball-ball"></i></a>
-                            <a href="http://pinterest.com" class="facebook" target="_blank"><i class="fab fa-pinterest"></i></a>
-                            <a href="http://instagram.com" class="facebook" target="_blank"><i class="fab fa-instagram"></i></a>
+                            a(href="http://facebook.com" class="facebook" target="_blank") #[i(class="fab fa-facebook-f")]
+                            a(href="http://google.com" class="facebook" target="_blank") #[i(class="fab fa-google-plus-g")]
+                            a(href="http://twitter.com" class="facebook" target="_blank") #[i(class="fab fa-twitter")]
+                            a(href="http://dribble.com" class="facebook" target="_blank") #[i(class="fas fa-basketball-ball")]
+                            a(href="http://pinterest.com" class="facebook" target="_blank") #[i(class="fab fa-pinterest")]
+                            a(href="http://instagram.com" class="facebook" target="_blank") #[i(class="fab fa-instagram")]
                 
                 //**************************
                 //==========================
@@ -109,6 +111,9 @@ html
                                     //==============
                                     li.link
                                         a المنتدي
+                                    li.link.search
+                                        form(dir="rtl")
+                                            input(type="search" placeholder="ابحث")
                         .brand.col-3
                             .img
                                 img(class="img-fluid" src="images/logo-1.png")
@@ -119,54 +124,44 @@ html
         //==========================
         //**************************
         section.slider
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
+            div(id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel")
+                div(class="carousel-inner")
 
                     //=============
                     // one item 
                     //==============
-                    <div class="carousel-item active">
-                        //- <img src="images/slider-1.jpg" class="d-block w-100" alt="#">
+                    div(class="carousel-item active")
                         .img.img1
                         .carousel-caption
-                            h2(class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".5s") اقوي الكورسات التعليميه في الوطن االعربي
-                            p(class="wow fadeInRight" data-wow-duration="1.5s" data-wow-delay=".5s")  تعلم اقوي المسارات والمهارات اللازمه لتبدا مسارك المهني 
+                            h2(class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".5s") اقوي الكورسات التعليميه في #[br]الوطن االعربي
+                            p(class="wow fadeInRight" data-wow-duration="1.5s" data-wow-delay=".5s")  تعلم اقوي المسارات والمهارات اللازمه #[br]لتبدا مسارك المهني 
                             a(href="#" class="wow fadeInUp button" data-wow-duration="1.5s" data-wow-delay=".5s") سجل الان
 
                     //=============
                     // one item
                     //==============
-                    </div>
-                    <div class="carousel-item">
-                        //- <img src="images/slider2.jpg" class="d-block w-100" alt="#">
+                    div(class="carousel-item")
                         .img.img2
                         .carousel-caption
-                                h2(class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".5s") اقوي الكورسات التعليميه في الوطن االعربي
-                                p(class="wow fadeInRight" data-wow-duration="1.5s" data-wow-delay=".5s")  تعلم اقوي المسارات والمهارات اللازمه لتبدا مسارك المهني 
+                                h2(class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".5s") اقوي الكورسات التعليميه في #[br]الوطن االعربي
+                                p(class="wow fadeInRight" data-wow-duration="1.5s" data-wow-delay=".5s")  تعلم اقوي المسارات والمهارات اللازمه #[br]لتبدا مسارك المهني 
                                 a(href="#"  class="wow fadeInUp button" data-wow-duration="1.5s"  data-wow-delay=".5s") سجل الان
-                    </div>
 
                     //=============
                     // one item 
                     //==============
-                    <div class="carousel-item">
-                        //- <img src="images/slider3.jpg" class="d-block w-100" alt="#">
+                    .div.carousel-item
                         .img.img3
                         .carousel-caption
-                                h2(class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".5s") اقوي الكورسات التعليميه في الوطن االعربي
-                                p(class="wow fadeInRight" data-wow-duration="1.5s"  data-wow-delay=".5s")  تعلم اقوي المسارات والمهارات اللازمه لتبدا مسارك المهني 
+                                h2(class="wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".5s") اقوي الكورسات التعليميه في #[br]الوطن االعربي
+                                p(class="wow fadeInRight" data-wow-duration="1.5s"  data-wow-delay=".5s")  تعلم اقوي المسارات والمهارات اللازمه #[br]لتبدا مسارك المهني 
                                 a(href="#"  class="wow fadeInUp button" data-wow-duration="1.5s"  data-wow-delay=".5s") سجل الان
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+                a(class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev")
+                    span(class="carousel-control-prev-icon" aria-hidden="true")
+                    span(class="sr-only") Previous
+                a(class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next")
+                    span(class="carousel-control-next-icon" aria-hidden="true")
+                    span(class="sr-only") Next
         //**************************
         //==========================
         //       START FEATURES
@@ -175,19 +170,19 @@ html
         section.features
             .container
                 .row
-                    .feat.feat1.col-12.col-md-6.col-lg-3.order-4
+                    .feat.feat1.col-12.col-md-6.col-lg-3.order-4.wow.zoomIn
                         i(class="fas fa-graduation-cap")
                         h3 دورات عالميه
                         p هنا تكمن فرصتك في الحصول علي اقوي الدورات التعليمية ولتصبح خبيرا في مجال #[bdi IT], فلتبدا الان
-                    .feat.feat2.col-12.col-md-6.col-lg-3.order-3
+                    .feat.feat2.col-12.col-md-6.col-lg-3.order-3.wow.zoomIn
                         i(class="fas fa-book")
                         h3 كتب الكترونيه
                         p هنا يمكنك ايجاد الالاف من الكتب والمراجع العلمية في شتي المجالات
-                    .feat.feat3.col-12.col-md-6.col-lg-3.order-2
+                    .feat.feat3.col-12.col-md-6.col-lg-3.order-2.wow.zoomIn
                         i(class="fas fa-gem")
                         h3 محاضرين محترقين
                         p تعلم بطريقة احترافيه من قبل فريق من المعلمين محترفين و المحاضرين
-                    .feat.feat4.col-12.col-md-6.col-lg-3.order-1
+                    .feat.feat4.col-12.col-md-6.col-lg-3.order-1.wow.zoomIn
                         i(class="fas fa-certificate")
                         h3 استقبل شهادتك
                         p بعد الانتهاء من الدورة واجتيازها بنجاح يمكنك اخذ شهادة موثقه تؤكد امكانيتك في البدا والعمل في مجال تخصصك
@@ -214,7 +209,7 @@ html
         section.course
                 h1.text-center دوراتنا التعليميه
                 .container 
-                    .row.owl-carousel
+                    .row.slick-carousel
                         .course-item.text-right
                             div(class="card")
                                 .card-img-top
@@ -226,7 +221,7 @@ html
                                         a(href="#") #[i(class="fa fa-link")]
                                 div.card-body
                                     a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
-                                    p.card-textSome في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                                    p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
                                 .card-footer
                                     .person
                                         img(src="images/person1.jpg" class="w-100" alt="#")
@@ -246,7 +241,7 @@ html
                                         a(href="#") #[i(class="fa fa-link")]
                                 div.card-body
                                     a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
-                                    p.card-textSome في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                                    p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
                                 .card-footer
                                     .person
                                         img(src="images/person1.jpg" class="w-100" alt="#")
@@ -266,7 +261,7 @@ html
                                         a(href="#") #[i(class="fa fa-link")]
                                 div.card-body
                                     a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
-                                    p.card-textSome في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                                    p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
                                 .card-footer
                                     .person
                                         img(src="images/person1.jpg" class="w-100" alt="#")
@@ -286,7 +281,7 @@ html
                                         a(href="#") #[i(class="fa fa-link")]
                                 div.card-body
                                     a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
-                                    p.card-textSome في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                                    p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
                                 .card-footer
                                     .person
                                         img(src="images/person1.jpg" class="w-100" alt="#")
@@ -306,7 +301,7 @@ html
                                         a(href="#") #[i(class="fa fa-link")]
                                 div.card-body
                                     a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
-                                    p.card-textSome في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                                    p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
                                 .card-footer
                                     .person
                                         img(src="images/person1.jpg" class="w-100" alt="#")
@@ -316,14 +311,570 @@ html
                                         span 54
                                         i.fas.fa-heart
 
+        //**************************
+        //==========================
+        //       GALLERY 
+        //==========================
+        //**************************
+        section.videos.text-right
+            h1.text-center اكثر المشاهدات
+            .wrapper.video-slick
+                .item.wow.zoomIn
+                    .overlay.text-center
+                        a(href="")
+                            div
+                                i(class="fas fa-play")
+                                p شاهد الفيديو
+
+                    figure
+                        img(src="images/video1.png", alt="#")
+                        figcaption
+                            h3 دورة تعلم الفرنسية
+                            p في هذه الدورة سوف تقوم باتقان اللغه الفرنسيه وتتحدثها بفصاحة 
+                .item.wow.zoomIn
+                    .overlay.text-center
+                        a(href="") 
+                            div
+                                i(class="fas fa-play")
+                                p شاهد الفيديو
+                    figure
+                        img(src="images/video2.png", alt="#")
+                        figcaption
+                            h3 دورة تعلم الفرنسية
+                            p في هذه الدورة سوف تقوم باتقان اللغه الفرنسيه وتتحدثها بفصاحة 
+                .item.wow.zoomIn
+                    .overlay.text-center
+                        a(href="")
+                            div
+                                i(class="fas fa-play")
+                                p شاهد الفيديو
+                    figure
+                        img(src="images/video3.png", alt="#")
+                        figcaption
+                            h3 دورة تعلم الفرنسية
+                            p في هذه الدورة سوف تقوم باتقان اللغه الفرنسيه وتتحدثها بفصاحة 
+                .item.wow.zoomIn
+                    .overlay.text-center
+                        a(href="")
+                            div
+                                i(class="fas fa-play")
+                                p شاهد الفيديو
+                    figure
+                        img(src="images/video1.png", alt="#")
+                        figcaption
+                            h3 دورة تعلم الفرنسية
+                            p في هذه الدورة سوف تقوم باتقان اللغه الفرنسيه وتتحدثها بفصاحة 
+                .item.wow.zoomIn
+                    .overlay.text-center
+                        a(href="")
+                            div
+                                i(class="fas fa-play")
+                                p شاهد الفيديو
+                    figure
+                        img(src="images/video4.png", alt="#")
+                        figcaption
+                            h3 دورة تعلم الفرنسية
+                            p في هذه الدورة سوف تقوم باتقان اللغه الفرنسيه وتتحدثها بفصاحة 
+                .item.wow.zoomIn
+                    .overlay.text-center
+                        a(href="")
+                            div
+                                i(class="fas fa-play")
+                                p شاهد الفيديو
+                    figure
+                        img(src="images/video3.png", alt="#")
+                        figcaption
+                            h3 دورة تعلم الفرنسية
+                            p في هذه الدورة سوف تقوم باتقان اللغه الفرنسيه وتتحدثها بفصاحة 
 
 
 
+        //**************************
+        //==========================
+        //       GALLERY 
+        //==========================
+        //**************************
+        section.gallery(id="gallery")
+            .heading.text-center
+                h1 معرض الصور
+                .ul-links
+                    ul
+                        li.education.active #[a(href="#" data-class=".shown-on-load") التعليم]
+                        li.capmous #[a(href="#" data-class=".campus") الحرم الجامعي]
+                        li.bulding #[a(href="#" data-class=".bulding") المبني]
+                        li.student #[a(href="#" data-class=".student") الطلاب]
+                        li.teacher #[a(href="#" data-class=".teacher") المعلمين]
+                        .clearfix
+            //===========================
+            //    start flex photos 
+            //===========================
+            .wrapper
+                //=============
+                //four flexed photos (first section on left)
+                //=============
+                .flex.flex-1
 
 
+                    div.box.campus.student
+                        .overlay.text-center
+                            a(href="images/campus1.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                        img(src="images/campus1.jpg")
+
+                    div.box.teacher
+                        .overlay.text-center
+                            a(href="images/teacher1.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                        img(src="images/teacher1.jpg")
+                    
+                    div.box.shown-on-load.teacher
+                        .overlay.text-center
+                            a(href="images/education1.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                        img(src="images/education1.jpg")
+
+                    div.box.teacher
+                        .overlay.text-center
+                            a(href="images/teacher2.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                        img(src="images/teacher2.jpg")
+
+                    div.box.bulding.teacher
+                        .overlay.text-center
+                            a(href="images/bulding1.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                        img(src="images/bulding1.jpg")
+
+                    div.box.shown-on-load.campus.bulding.student
+                        .overlay.text-center
+                            a(href="images/education3.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                        img(src="images/education3.jpg")
+
+                    div.box.student
+                        .overlay.text-center
+                            a(href="images/student2.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                        img(src="images/student2.jpg")
+
+                    div.box.shown-on-load.campus.bulding.student
+                        .overlay.text-center
+                            a(href="images/education2.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                        img(src="images/education2.jpg")
+
+                    div.box.shown-on-load.campus.bulding
+                        .overlay.text-center
+                            a(href="images/education4.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                        img(src="images/education4.jpg")
+                //=============
+                //four flexed photos (section on right)
+                //=============
+                .flex.flex-2
+                    //=============
+                    //the tallest photo (section on rigth)
+                    //=============
+                    .fifty
+
+                        div.box.shown-on-load.teacher
+                            .overlay.text-center
+                                a(href="images/education5.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                            img(src="images/education5.jpg")
+                        
+                        div.box.bulding
+                            .overlay.text-center
+                                a(href="images/bulding2.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                            img(src="images/bulding2.jpg")
+
+                        div.box.campus
+                            .overlay.text-center
+                                a(href="images/campus2.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                            img(src="images/campus2.jpg")
+
+                        div.box.student
+                            .overlay.text-center
+                                a(href="images/student1.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                            img(src="images/student1.jpg")
+
+                    //=============
+                    //the other two photos (section on rigth)
+                    //=============
+                    .fifty
+                        
+                        div.box.teacher
+                            .overlay.text-center
+                                a(href="images/teacher3.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                            img(src="images/teacher3.jpg")
+                        
+                        div.box.shown-on-load.campus.bulding.student
+                            .overlay.text-center
+                                a(href="images/education6.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                            img(src="images/education6.jpg")
+
+                        div.box.shown-on-load.campus.bulding.teacher
+                            .overlay.text-center
+                                a(href="images/education7.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                            img(src="images/education7.jpg")
+
+                        div.box.student
+                            .overlay.text-center
+                                a(href="images/student3.jpg" data-fancybox="images") #[i(class="fa fa-search")]
+                            img(src="images/student3.jpg")
+
+        //**************************
+        //==========================
+        //  learn with our process 
+        //==========================
+        //**************************
+        section.process.text-center
+            .overlay
+            h1 تعلم من خلال خطتنا التعليمية
+            .container
+                .row
+                    .plan.col-12.col-sm-6.col-md-3
+                        .text
+                            h3 اختر الدوره التعليمية
+                            p اسرع طريقة لاختيار الدورة المناسبة لك هي ان تذهب الي الفائمة العلوية وتختار ما هو مناسب
+                        .outline
+                            .icon
+                                i(class="fas fa-file-alt")
+
+                    .plan.col-12.col-sm-6.col-md-3
+                        .text
+                            h3 اختر الدرس 
+                            p كل دولاة تحتوي علي العديد من الدروس وعليك ان تبدا باول درس لمي تبدا رحلتك في التعلم
+
+                        .outline                  
+                            .icon
+                                i(class="fas fa-clone")
+
+                    .plan.col-12.col-sm-6.col-md-3
+                        .text
+                            h3 الق نظره علي المنهج
+                            p عليك ان تلقي نظرة علي المنهج الخاص بكل دولاة انت مقبل علي تعلمها قبل ان تبدا فيها
+                        .outline                          
+                            .icon
+                                i(class="fas fa-search")
+
+                    .plan.col-12.col-sm-6.col-md-3
+                        .text
+                            h3 سجل في الدورة
+                            p اذا اعتقدت ان هذه الدورة هي المناسبه لك كل ما عليك فغلة هوه التسجيل فيها لكي تحصل علي شهاده بعد اتمامها
+
+                        .outline
+                            .icon
+                                i(class="fas fa-shopping-basket")
+        
+        //**************************
+        //==========================
+        //       SPONSOR SECTION 
+        //==========================
+        //**************************
+        section.sponsor
+            .container
+                .row.sponsor-carousel
+                    .img.col-2.wow.zoomIn(data-wow-duration="1s")
+                        img(src="images/sponsor1.png")
+                    .img.col-2.wow.zoomIn(data-wow-duration="1.3s")
+                        img(src="images/sponsor2.png")
+                    .img.col-2.wow.zoomIn(data-wow-duration="1.6s")
+                        img(src="images/sponsor3.png")
+                    .img.col-2.wow.zoomIn(data-wow-duration="1.9s")
+                        img(src="images/sponsor4.png")
+                    .img.col-2.wow.zoomIn(data-wow-duration="2.2s")
+                        img(src="images/sponsor5.png")
+                    .img.col-2.wow.zoomIn(data-wow-duration="2.5s")
+                        img(src="images/sponsor6.png")
+
+        //**************************
+        //==========================
+        //  start statistics
+        //==========================
+        //**************************
+        section.statics.text-center
+            .container
+                .row
+                    div(class="wow fadeInUp col-12 col-md" data-wow-duration="2s")
+                        h3(class="counter") #[span(data-count="242") 0]+
+                        h4 متخرج
+                    div(class="wow fadeInUp col-12 col-md"  data-wow-delay=".3s" data-wow-duration="2s")
+                        h3(class="counter" ) #[span(data-count="353") 0]+
+                        h4 طالب
+                    div(class="wow fadeInUp col-12 col-md"  data-wow-delay=".6s" data-wow-duration="2s")
+                        h3(class="counter") #[span(data-count="15") 0]+
+                        h4 جائزة
+                    div(class="wow fadeInUp col-12 col-md"  data-wow-delay=".9s" data-wow-duration="2s")
+                        h3(class="counter") #[span(data-count="99") 0]+
+                        h4 مدرس
+                    div(class="wow fadeInUp col-12 col-md"  data-wow-delay="1.2s" data-wow-duration="2s")
+                        h3(class="counter") #[span(data-count="60") 0]+
+                        h4 عضو
+
+        //**************************
+        //==========================
+        //  start online learning
+        //==========================
+        //**************************
+        section.online-learning
+            .overlay
+            h1.text-center لماذا التعلم اونلاين؟
+            p.text-center عند التعلم اونلاين سوف يكون لديك الكثير من المميزات
+            .container.text-right
+                .row.justify-content-between
+                    .plan.col-12.col-sm-6.col-lg-4
+                        .outline
+                            .icon
+                                i(class="fas fa-object-ungroup")
+                        .text
+                            h4 واجهة مستحدم بسيطه
+                            p تم تصميم موقعنا من قبل اكثر من 200 متحصص لكي يلائم جميع المستخدمين في شتي الاعمار والمجالات
+
+                    .plan.col-12.col-sm-6.col-lg-4
+                        .outline                  
+                            .icon
+                                i(class="fas fa-tv")
+                        .text
+                            h4 تعلم من خلال اي جهاز وفي اي وقت  
+                            p يمكنم النعلم من اي جهاو وفي اي وقت لذا بوابتنا التعليمية هي الاختيار الامثل للتعلم اونلاين
+                .row.justify-content-between
+                    .plan.col-12.col-sm-6.col-lg-4
+                        .outline                          
+                            .icon
+                                i(class="fas fa-file-pdf")
+                        .text
+                            h4 في اقوي المواقع التعليمية #[bdi #1]
+                            p حصد موقعنا المرتبه الاولي في قائمة اكثر المواقع التعليميه زياره في هذه السنه
+
+                    .plan.col-12.col-sm-6.col-lg-4
+                        .outline
+                            .icon
+                                i(class="fas fa-wrench")
+
+                        .text
+                            h4 دعم فني
+                            p يوجد لديا اساتذة ومتخصصين جاهزين لحل اي مشكلة قد تواجهك خلال رحلتك التعليمية
+
+
+        //**************************
+        //==========================
+        //  OUR SKILLED INSTRUCTORS 
+        //==========================
+        //**************************
+        section.instructors
+                h1.text-center مدربينا المتميزون
+                .container 
+                    .row.slick-carousel
+                        .course-item
+                            div(class="card")
+                                .card-img-top
+                                    img(src="images/instructor1.jpg" class="w-100" alt="#")
+                                div.card-body
+                                    h4.card-title William Jones
+                                    span.card-text Web Developer  
+                        .course-item
+                            div(class="card")
+                                .card-img-top
+                                    img(src="images/instructor2.jpg" class="w-100" alt="#")
+                                div.card-body
+                                    h4.card-title Maike Adams
+                                    span.card-text UI/UX Designer
+                        .course-item
+                            div(class="card")
+                                .card-img-top
+                                    img(src="images/instructor3.jpg" class="w-100" alt="#")
+                                div.card-body
+                                    h4.card-title Dominec Stiwart
+                                    span.card-text PHP Developer  
+                        .course-item
+                            div(class="card")
+                                .card-img-top
+                                    img(src="images/instructor4.jpg" class="w-100" alt="#")
+                                div.card-body
+                                    h4.card-title Mohamed Gamal
+                                    span.card-text Soft Skills Instructor
+                        .course-item
+                            div(class="card")
+                                .card-img-top
+                                    img(src="images/instructor5.jpg" class="w-100" alt="#")
+                                div.card-body
+                                    h4.card-title Alex Phil
+                                    span.card-text Web Designer  
+                        .course-item
+                            div(class="card")
+                                .card-img-top
+                                    img(src="images/instructor6.jpg" class="w-100" alt="#")
+                                div.card-body
+                                    h4.card-title James Philip
+                                    span.card-text HR Manger
+        //**************************
+        //==========================
+        //  START TESTEMONIALS
+        //==========================
+        //**************************
+        section.testem
+            h1.text-center ماذا قالو عنا
+            .container
+                .row.text-right.testem-carousel
+                    .one-item.col
+                        .img 
+                            img(src="images/instructor1.jpg" alt="#")
+                        .text
+                            .name
+                                h3 احمد خليفة
+                                span مطور مواقع
+                            .desc
+                                q لقد استمتعت جدا من خلال تعلمي علي هذه المنصه الشيقة والاكثر من رائعه , لقد اضافت الي الكثر من المهارات التي ساعدتني لايجاد فرصة فمل في التخصص الذي قمن باختياره علي منصة اديو حيت 
+                    .one-item.col
+                        .img 
+                            img(src="images/instructor2.jpg" alt="#")
+                        .text
+                            .name
+                                h3 محمد منصور
+                                span مطور مواقع
+                            .desc
+                                q لقد استمتعت جدا من خلال تعلمي علي هذه المنصه الشيقة والاكثر من رائعه , لقد اضافت الي الكثر من المهارات التي ساعدتني لايجاد فرصة فمل في التخصص الذي قمن باختياره علي منصة اديو حيت 
+                    .one-item.col
+                        .img 
+                            img(src="images/instructor3.jpg" alt="#")
+                        .text
+                            .name
+                                h3 وائل جمعة
+                                span مطور مواقع
+                            .desc
+                                q لقد استمتعت جدا من خلال تعلمي علي هذه المنصه الشيقة والاكثر من رائعه , لقد اضافت الي الكثر من المهارات التي ساعدتني لايجاد فرصة فمل في التخصص الذي قمن باختياره علي منصة اديو حيت 
+        //**************************
+        //==========================
+        //  START MAP
+        //==========================
+        //**************************
+        section.map
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45993.157877943326!2d31.353372722642057!3d31.04123813835002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f79db7a9053547%3A0xf8dab3bbed766c97!2sMansoura%2C%20Mansoura%20Qism%202%2C%20Mansoura%2C%20Dakahlia%20Governorate!5e0!3m2!1sen!2seg!4v1573387194010!5m2!1sen!2seg" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        
+        //**************************
+        //==========================
+        //  START CONTACT FORM
+        //==========================
+        //**************************
+        section.contact-form
+            .overlay
+            .container
+                .row
+                    .counter.col-12.col-lg-7
+                        h2.text-center الدورة القادمة
+                        h1.text-center سوف تكون متاحة بعد
+                        #timer.text-center
+                            #days
+                            #hours
+                            #minutes
+                            #seconds
+                    form(action="#" dir="rtl").col-12.col-lg-5.text-right
+                        .text.text-center
+                            span آخر 7 اماكن
+                            h2 سجل الآن
+                        div.flex
+                            .form-group
+                                input(type="text" name='username' placeholder="الاسم").input
+                                p.alert.alert-danger  هذا الحقل ضروري
+                            .form-group                            
+                                input(type="text" name='surname' placeholder="اللقب").input
+                                p.alert.alert-danger هذا الحقل ضروري
+                        div.flex
+                            .form-group
+                                input(type="email" name='email' placeholder="البريد الالكتروني").email
+                                p.alert.alert-danger هذا الحقل ضروري
+                            .form-group                            
+                                input(type="text" name='subject' placeholder="الموضوع").input
+                                p.alert.alert-danger هذا الحقل ضروري
+                        textarea(name="message", cols="20" placeholder="الرسالة").input
+                        p.alert.alert-danger هذا الحقل ضروري
+                        input(type="submit").btn.btn-block
+                        .loader.text-center
+                            img(src="images/ajax-loader.gif", alt="")
+                        p.alert.alert-danger يوجد خطا في حقل او اكثر , من فضلك اعد المحاولة.
+                        p.alert.alert-primary لقد تم ارسال طلبك بنجاح , شكرا لك !
+
+        //**************************
+        //==========================
+        //  START FOOTER
+        //==========================
+        //**************************
+        footer.text-right
+            .container
+                .row
+                    //=========
+                    //start brand and social
+                    //=========
+                    div(class="order-sm-0 order-md-2 order-lg-0 col-md-6 col-lg-3")
+                        .heading
+                            img(src="images/logo-1.png")
+                            p تم تصميم اديو جيت لاتمام عمليتك التعليمية في اي مجال بكامل الكفائه المطلوبة
+                        .description
+                            .location
+                                p المنصوره , شارع احمد ماهر #[i(class="fas fa-home") ]
+                                p +201005037275 #[i(class="fas fa-phone")]
+                                p #[a(href="mailto:edu@gate.com") edu@gate.com] #[i(class="fas fa-envelope")]
+                                
+                            .social
+                                div
+                                    a(href="#" target="_blank") #[i(class="fab fa-facebook-f")]
+                                    a(href="#" target="_blank") #[i(class="fab fa-google-plus-g")]
+                                    a(href="", target="_blank") #[i(class="fab fa-twitter")]
+                    //=========
+                    //start useful links
+                    //=========
+                    div(class="order-sm-0 order-md-1 order-lg-0  col-md-6  col-lg-2 links")
+                        .heading
+                            h5 روابط مهمة
+                        ul
+                            li #[a(href="#") حول]
+                            li #[a(href="#") F.A.Q]
+                            li #[a(href="#") المعرض]
+                            li #[a(href="#") المنتدي]
+                            li #[a(href="#") المحادثه]
+
+
+
+                    //=========
+                    //start footer blogs
+                    //=========
+                    div(class="order-sm-0 order-md-2 order-lg-0 col-md-6 col-lg-3")
+                        .heading
+                            h5 الدورات
+                        .blogs
+                            //one blog
+                            .blog
+                                .img 
+                                    img(src="images/footer-course1.jpg")
+                                .desc
+                                    p #[a(href="#") تعلم الوردبريس] 
+                            //one blog
+                            .blog
+                                .img 
+                                    img(src="images/footer-course2.jpg")
+                                .desc
+                                    p #[a(href="#") #[bdi sass] تعلم لغة]
+                            //one blog
+                            .blog
+                                .img 
+                                    img(src="images/footer-course3.jpg")
+                                .desc
+                                    p #[a(href="#") #[bdi PHP] احترف]
+                    //=========
+                    //start gallery pics
+                    //=========
+                    div(class="order-sm-0 order-md-2 order-lg-0 col-md-6 col-lg-4")
+                        .heading
+                            h5 المعرض
+                        .footer-gallery
+                            a(href="images/gallery-lg1.jpg" data-fancybox="gallery") #[img(src="images/gallery1.jpg")]
+                            a(href="images/gallery-lg2.jpg" data-fancybox="gallery") #[img(src="images/gallery2.jpg")]
+                            a(href="images/gallery-lg3.jpg" data-fancybox="gallery") #[img(src="images/gallery3.jpg")]
+                            a(href="images/gallery-lg4.jpg" data-fancybox="gallery") #[img(src="images/gallery4.jpg")]
+                            a(href="images/gallery-lg5.jpg" data-fancybox="gallery") #[img(src="images/gallery5.jpg")]
+                            a(href="images/gallery-lg6.jpg" data-fancybox="gallery") #[img(src="images/gallery6.jpg")]
+                            a(href="images/gallery-lg7.jpg" data-fancybox="gallery") #[img(src="images/gallery7.jpg")]
+                            a(href="images/gallery-lg8.jpg" data-fancybox="gallery") #[img(src="images/gallery8.jpg")]
+                            a(href="images/gallery-lg9.jpg" data-fancybox="gallery") #[img(src="images/gallery9.jpg")]
+                .copy
+                    p All rights are reserved &copy; 2019 EduGate 
+        
+        i(class="scroll-top fas fa-chevron-up")
 
     script(src="js/jQuery-3-4-1.min.js")
     script(src="js/wow.min.js")
     script(src="js/bootstrap.min.js")
     script(src="js/slick.min.js")
+    script(src="js/jquery.fancybox.min.js")
     script(src="js/app.js")
