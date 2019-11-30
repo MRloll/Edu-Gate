@@ -20,7 +20,7 @@ html
         //==========================
         //**************************
         header
-            .top-nav
+            .top-nav.d-none.d-md-block
                 .container
                     .row
                         .contact.col-12.col-lg-6.text-center.text-lg-left
@@ -56,13 +56,13 @@ html
                                     // one link 
                                     //==============
                                     li(class="active link") 
-                                        a(href="#") الصفحة الرئيسيه
+                                        a(href="index.html") الصفحة الرئيسيه
 
                                     //=============
                                     // one link 
                                     //==============
                                     li(data-class=".courses").link 
-                                        a(href="#") <i class="fas fa-chevron-down"></i>  الكورسات
+                                        a(href="inner-pages/courses.html") <i class="fas fa-chevron-down"></i>  الكورسات
                                         .box.courses
                                             ul
                                                 //=============
@@ -104,13 +104,13 @@ html
                                     // one link 
                                     //==============
                                     li.link
-                                        a(href="#") المتجر
+                                        a(href="inner-pages/content.html") المحتوي
 
                                     //=============
                                     // one link 
                                     //==============
                                     li.link
-                                        a المنتدي
+                                        a(href="inner-pages/contact.html") اتصل بنا
                                     li.link.search
                                         form(dir="rtl")
                                             input(type="search" placeholder="ابحث")
@@ -313,7 +313,7 @@ html
 
         //**************************
         //==========================
-        //       GALLERY 
+        //       videaos 
         //==========================
         //**************************
         section.videos.text-right
@@ -587,18 +587,23 @@ html
             .container
                 .row
                     div(class="wow fadeInUp col-12 col-md" data-wow-duration="2s")
+                        div.icon #[i(class="fas fa-user-graduate")]
                         h3(class="counter") #[span(data-count="242") 0]+
                         h4 متخرج
                     div(class="wow fadeInUp col-12 col-md"  data-wow-delay=".3s" data-wow-duration="2s")
+                        div.icon #[i(class="fas fa-user-friends")]
                         h3(class="counter" ) #[span(data-count="353") 0]+
                         h4 طالب
                     div(class="wow fadeInUp col-12 col-md"  data-wow-delay=".6s" data-wow-duration="2s")
+                        div.icon #[i(class="fas fa-award")]
                         h3(class="counter") #[span(data-count="15") 0]+
                         h4 جائزة
                     div(class="wow fadeInUp col-12 col-md"  data-wow-delay=".9s" data-wow-duration="2s")
+                        div.icon #[i(class="fas fa-chalkboard-teacher")]
                         h3(class="counter") #[span(data-count="99") 0]+
                         h4 مدرس
                     div(class="wow fadeInUp col-12 col-md"  data-wow-delay="1.2s" data-wow-duration="2s")
+                        div.icon #[i(class="fas fa-users")]
                         h3(class="counter") #[span(data-count="60") 0]+
                         h4 عضو
 
@@ -877,4 +882,53 @@ html
     script(src="js/bootstrap.min.js")
     script(src="js/slick.min.js")
     script(src="js/jquery.fancybox.min.js")
+    script.
+        $(document).ready(function () {
+            
+            //turn on counter function when it appears in view port
+            $(window).on('scroll', function () {
+                
+                //showing the scroll top button
+                if($(window).scrollTop() > $('.course').height()) {
+                    $('.scroll-top').fadeIn();
+                }else {
+                    $('.scroll-top').fadeOut();
+                }
+
+                if ($(window).scrollTop() > $('.statics').offset().top - $(window).height()) {
+
+                    counter();
+                }
+            });
+            
+            /*
+            **********************
+            ** COUNTER FUNCTION
+            **********************
+            */
+            function counter() {
+                $('.counter span').each(function() {
+                    var counter = $(this),
+                        countTo = counter.attr('data-count');
+
+                    const countObj = { countNum: counter.text()}
+
+                    $(countObj).animate({
+                        countNum: countTo
+                    },{
+
+                        duration: 2000,
+                        easing:'linear',
+                        step: function() {
+
+                            counter.text(Math.floor(this.countNum));
+                        },
+                        complete: function() {
+                            counter.text(this.countNum);
+                        }
+
+                    });
+                });
+            }
+        });
     script(src="js/app.js")

@@ -16,31 +16,12 @@ $(document).ready(function () {
 
     });
 
-
-
-
-
     /*
     **********************
     ** making the nav sticky to the top
     **********************
     */
-    $(window).on('scroll', function () {
-        //turn on counter function when it appears in view port
-        if ($(window).scrollTop() > $('.statics').offset().top - $(window).height()) {
-
-            counter();
-        }
-
-        
-        //showing the scroll top button
-        if($(window).scrollTop() > $('.course').height()) {
-            $('.scroll-top').fadeIn();
-
-        }else {
-            $('.scroll-top').fadeOut();
-        }
-    
+    $(window).on('scroll', function () {            
     
         //adjusting the height of nav on scroll
         if ($(window).innerWidth() > 991) {
@@ -48,15 +29,15 @@ $(document).ready(function () {
                 
                 //adjusting the slider top marging when scroll
                 //to prevent a proplem when the nav links takes position fixed
-                $('.slider').css({
-                    marginTop: $('.nav-links').height()
+                $('body').css({
+                    paddingTop: $('.nav-links').height()
                 });
 
                 $('nav .nav-links li.link').css("padding", "6px 0");
             } else {
     
-                $('.slider').css({
-                    marginTop: 0
+                $('body').css({
+                    paddingTop: 0
                 })
     
                 $('nav .nav-links li.link').css("padding", "30px 0");
@@ -64,13 +45,13 @@ $(document).ready(function () {
         } else if ($(window).innerWidth() < 991) {
 
             if($(window).scrollTop() > $('.top-nav').height()) {
-                $('.slider').css({
-                    marginTop: $('nav').height()
+                $('body').css({
+                    paddingTop: $('nav').height()
                 });
 
             } else {
-                $('.slider').css({
-                    marginTop: 0
+                $('body').css({
+                    paddingTop: 0
                 });    
             }
         }
@@ -90,9 +71,6 @@ $(document).ready(function () {
                 position: 'relative',
             });
         }
-
-        
-        
     });            
 
 
@@ -175,42 +153,6 @@ $(document).ready(function () {
             .find(".box:not(" + $(this).data('class') + ")" ).hide();
 
     });
-
-
-    /*
-    **********************
-    ** COUNTER FUNCTION
-    **********************
-    */
-
-    function counter() {
-        $('.counter span').each(function() {
-            var counter = $(this),
-                countTo = counter.attr('data-count');
-
-            const countObj = { countNum: counter.text()}
-
-            $(countObj).animate({
-                countNum: countTo
-            },{
-
-                duration: 2000,
-                easing:'linear',
-                step: function() {
-
-                    counter.text(Math.floor(this.countNum));
-                },
-                complete: function() {
-                    counter.text(this.countNum);
-                }
-
-            });
-        });
-    }
-
-
-
-
     /*=======================
     **********************
     ** CONTACT  COUNT DOWN 
@@ -334,7 +276,7 @@ $(document).ready(function () {
               }
             },
             {
-              breakpoint: 400,
+              breakpoint: 500,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1

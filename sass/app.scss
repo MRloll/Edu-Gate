@@ -1,51 +1,6 @@
 @import "_helpers.scss";
 @import "_layout.scss";
 
-
-/*
-=======================
-===== global style ====
-=======================
-*/
-a {
-    color: inherit;
-    &:hover{
-        color: inherit;
-        text-decoration: none;
-    }
-}
-
-*{
-    outline: 0 !important;
-    font-family: 'Cairo', sans-serif;
-}
-
-h1 {font-size: 3rem;}
-
-body {
-    position: relative;
-}
-
-.scroll-top {
-    display: none;
-    cursor: pointer;
-    background-color: $fourthColor;
-    @include prefixer(box-shadow, 0 0 10px 4px black, webkit moz ms o);
-    text-align: center;
-    border-radius: 50%;
-    padding:20px;
-    font-size: 25px;
-    color: $firstColor;
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    z-index: 30;
-    @media #{$maxSmall} {
-        padding: 15px;
-        font-size: 17px;
-    }
-}
-
 /*
 =======================
 ===== start header ====
@@ -62,15 +17,15 @@ header {
         ===== start top-nav ====
         =======================
         */
-        background-color: $firstColor;
+        background-color: $secColor;
         i:hover, a:hover, span:hover{
-            color: $thirdColor;
+            color: $firstColor;
             @extend %transition; 
         }
         .contact {
             div {
                 i{
-                    color: $thirdColor;
+                    color: $firstColor;
                     margin-right: 7px;;
                 }
                 display: inline-block;
@@ -80,6 +35,9 @@ header {
         .social {
             a:not(:last-of-type){
                 margin-right: 20px;
+            }
+            i{
+                font-size: 20px;
             }
         }
     
@@ -93,7 +51,6 @@ header {
         width: 100%;
         background-color: #fff;
         z-index: 20;
-        @include prefixer(box-shadow, 3px 0 7px rgba(0, 0, 0, 0.3), webkit moz ms o);
         .container {
             height: 100%;
             .row {
@@ -113,7 +70,7 @@ header {
                         li.search{
                             input {
                                 height: 30px;
-                                width: 150px;
+                                width: 125px;
                                 display: inline-block;
                                 border: 1px solid #ccc;
                                 border-radius: 5px;
@@ -282,8 +239,7 @@ header {
                     align-content: center;
                     justify-content: flex-end;
                     flex-wrap: wrap;
-                    h2 {
-                        font-size: 3rem;
+                    h2 {                        
                         flex-basis: 100%;
                     }
                     p {
@@ -308,11 +264,8 @@ header {
                     height: 400px;
                     .carousel-caption {
                         justify-content: center;
-                        h2 {
-                            font-size: 2rem;
-                        }
                         p {
-                            font-size: 18px;
+                            font-size: 15px;
                         }
                         .button {
                             padding: 7px 20px;
@@ -393,15 +346,17 @@ header {
     background-size: cover;
     .row {
         .wrapper {
-            h2 {
-                font-size: 3rem;
-            }
             p:first-of-type {
                 font-size: 25px;
             }
         }
         @media #{$minSmall} {
             justify-content: flex-end;
+        }
+        @media #{$maxMobile} {
+            p:first-of-type {
+                font-size: 20px !important;
+            }
         }
     }
 }
@@ -411,7 +366,7 @@ header {
 =======================
 */
 .course {
-    padding: 100px 0;
+    padding: 100px 10px;
     h1 {margin-bottom: 20px;}
     .row{
         display: flex;
@@ -419,24 +374,23 @@ header {
         flex-wrap: nowrap;
         align-items: center;
         [class*="fa-arrow"]{
-            background: #ffdc34;
+            background: $secColor;
             padding: 10px;
             cursor: pointer;
+            @extend %transition;
+            &:hover {
+                background-color: $thirdColor;
+                color: white;
+            }
         }
-        .fa-arrow-left {
-            border-top-left-radius: 14px;
-            border-bottom-left-radius: 14px;        
-            @include prefixer(box-shadow, -2px 4px 11px 0px black, webkit moz ms o);
-        }    
-        .fa-arrow-right {
-            border-top-right-radius: 14px;
-            border-bottom-right-radius: 14px;        
-            @include prefixer(box-shadow, 2px 4px 11px 0px black, webkit moz ms o);
-        }    
     }
     .course-item {
         margin: 10px;
         cursor: grab;
+        .card {
+            border: 1px solid #ccc;
+            padding: 3px;
+        }
         .card-img-top {
             z-index: 10;
             img {
@@ -460,7 +414,7 @@ header {
                 border-top-left-radius: 5px;
                 border-bottom-left-radius: 5px;
                 width: auto;
-                background: $fourthColor;
+                background: $secColor;
             }
             .overlay {
                 @include opacity(.5);
@@ -468,7 +422,7 @@ header {
                 top: 0;
                 right:0;
                 height: 100%;
-                background: rgba(77, 213, 153, 5);
+                background: $thirdColor;
             }
             .browse {
                 @include opacity(0);
@@ -486,7 +440,7 @@ header {
                     color: white;
                     padding: 15px;
                     border-radius: 50%;
-                    border: 1px solid $fourthColor;
+                    border: 1px solid $secColor;
                 }
             }
         }
@@ -511,7 +465,7 @@ header {
                     display: none;
                     position: absolute;
                     top: -35px;
-                    right: -50%;
+                    right: -37%;
                     padding: 0px 5px;
                     border-radius: 4px;
                     text-align: center;
@@ -519,7 +473,6 @@ header {
                     background: $secColor;
                     span {
                         font-size: 11px;
-                        font-weight: bold;
                         color: white;
                         line-height: .5;
                         position: relative;
@@ -532,7 +485,7 @@ header {
                             @include prefixer(transform, rotate(135deg), webkit moz ms o);
                             width: 10px;
                             height: 10px;
-                            bottom: -10px;
+                            bottom: -5px;
                             right: 42%;
                         }
                     }
@@ -659,6 +612,11 @@ header {
                         &::before{
                             width: 100%;
                         }
+                    }
+                }
+                @media #{$maxMobile} {
+                    li {
+                        font-size: 15px;
                     }
                 }
             }
@@ -796,7 +754,7 @@ header {
                 .icon {
                     border-radius: 50%;
                     font-size: 55px;
-                    background: white;
+                    background: $secColor;
                     color: #333;
                     width: 100%;
                     height: 100%;
@@ -805,7 +763,6 @@ header {
                     align-items: center;
                     @extend %transition;
                     &:hover {
-                        background: $secColor;
                         color: white;
                     }
                 }
@@ -835,6 +792,9 @@ header {
                     display: none;
                 }
             }
+            @media #{$maxMobile} {
+               p {font-size:15px ;}
+            }
         }
 
     }
@@ -845,14 +805,20 @@ header {
 =========================*/
 section.statics {
     padding: 100px 0;
-    background-color: $fourthColor;
-    color: $firstColor;
+    color: white;
     overflow: hidden;
+    background: url(../images/statistics-bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     .row {
         flex-direction: row-reverse;
     }
     div {
         margin-bottom: 10px;
+        .icon {
+            font-size: 71px;
+            margin-bottom: 20px;
+        }
         h3{
             font-weight: bold;
             font-size: 4rem;
@@ -865,11 +831,11 @@ section.statics {
 
 /*
 =======================
-===== START PROCESS ===
+===== START why online learning ===
 =======================
 */
 .online-learning {
-    padding: 120px 0;
+    padding: 120px 10px;
     background: url(../images/online-learning.jpg) 50% 50%;
     background-size: cover;
     color: white;
@@ -888,6 +854,9 @@ section.statics {
     }
     h4 {
         font-weight: bold;
+        @media #{$maxMobile} {
+            font-size: 20px;
+        }
     }
     .row {
         flex-direction: row-reverse;
@@ -909,7 +878,7 @@ section.statics {
                 .icon {
                     border-radius: 50%;
                     font-size: 30px;
-                    background: white;
+                    background: $secColor;
                     color: #333;
                     width: 100%;
                     height: 100%;
@@ -918,7 +887,6 @@ section.statics {
                     align-items: center;
                     @extend %transition;
                     &:hover {
-                        background: $secColor;
                         color: white;
                     }
                 }
@@ -934,7 +902,7 @@ section.statics {
 =======================
 */
 .instructors {
-    padding: 100px 0;
+    padding: 100px 10px;
     h1 {margin-bottom: 20px;}
     .row{
         display: flex;
@@ -942,20 +910,15 @@ section.statics {
         flex-wrap: nowrap;
         align-items: center;
         [class*="fa-arrow"]{
-            background: #ffdc34;
+            background: $secColor;
             padding: 10px;
             cursor: pointer;
+            @extend %transition;
+            &:hover {
+                background: $thirdColor;
+                color: white;
+            }
         }
-        .fa-arrow-left {
-            border-top-left-radius: 14px;
-            border-bottom-left-radius: 14px;        
-            @include prefixer(box-shadow, -2px 4px 11px 0px black, webkit moz ms o);
-        }    
-        .fa-arrow-right {
-            border-top-right-radius: 14px;
-            border-bottom-right-radius: 14px;        
-            @include prefixer(box-shadow, 2px 4px 11px 0px black, webkit moz ms o);
-        }    
     }
     .course-item {
         .card {
@@ -1039,6 +1002,19 @@ section.statics {
                     }
                 }
             }
+            @media #{$maxMobile} {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+                .text {
+                    .name {
+                        margin: 20px 0;
+                    }
+                    .desc {
+                        padding: 0;
+                    }
+                }
+            }
         }
         .slick-dots {
             display: flex;
@@ -1110,7 +1086,7 @@ section.statics {
                     font-weight: bold;
                     padding: 5px 10px;
                     color: $firstColor;
-                    background: $fourthColor;
+                    background: $secColor;
                     border-radius: 10px;
                 }                  
             }
@@ -1120,7 +1096,7 @@ section.statics {
             padding: 20px 50px;
             .text {
                 span {
-                    background: #dbb079;
+                    background: $secColor;
                     color: white;
                     font-weight: bold;
                     border-radius: 5px;
@@ -1180,23 +1156,30 @@ section.statics {
                 }
             }
             input[type="submit"] {
-                background: #6e8eba;
+                background: $secColor;
                 border-radius: 3px;
                 padding: 13px;
                 color: white;
                 font-weight: bold;
+                &:hover {
+                    background-color: $thirdColor;
+                }
             }
             img {
                 text-align: center;
                 display: none;
                 margin-bottom: 15px;
             }
-            @media (max-width: 1199px) {
-                margin-top: 40px;
-                .form-group{
-                    width: 100%;
-                }
-            }
+        }
+    }
+    @media (max-width: 576px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        .counter {
+            margin-bottom: 40px;
+        }
+        .form-group{
+            width: 100%;
         }
     }
 }
@@ -1215,7 +1198,7 @@ footer {
         }
     }
     a:hover {
-        color: $thirdColor;
+        color: $secColor;
     }
     .heading {
         padding: 6px 0;
@@ -1234,7 +1217,7 @@ footer {
         .location {
             p {
                 &:hover {
-                    color: $thirdColor;
+                    color: $secColor;
                 }
                 i {
                     margin-left: 10px;
@@ -1308,12 +1291,15 @@ footer {
                height: auto;
            }   
         }
+        @media #{$maxMobile} {
+            justify-content: center;
+        }
     }
     .copy {
         text-align: center;
         border-top: 1px solid #ccc;
         padding: 15px;
-        color: $thirdColor; 
+        color: $secColor; 
         p {
             margin: 0px;
         }

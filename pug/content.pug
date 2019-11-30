@@ -1,0 +1,283 @@
+extends contact
+block the-title
+    title EduGate - Content
+block append stylesheet
+    link(rel="stylesheet" href="../css/content.css" type="text/css")        
+block header
+    //**************************
+    //==========================
+    //       START HEADER
+    //==========================
+    //**************************
+    header
+        .top-nav.d-none.d-md-block
+            .container
+                .row
+                    .contact.col-12.col-lg-6.text-center.text-lg-left
+                        .mail                            
+                            a(href="mailto:walidelloll2018@gmail.com") #[i(class="far fa-envelope")] walidelloll2018@gmail.com
+                        .phone
+                            i(class="fas fa-phone")
+                            span +201005037275
+                    .social.col-12.col-lg-6.text-center.text-lg-right
+                        a(href="http://facebook.com" class="facebook" target="_blank") #[i(class="fab fa-facebook-f")]
+                        a(href="http://google.com" class="facebook" target="_blank") #[i(class="fab fa-google-plus-g")]
+                        a(href="http://twitter.com" class="facebook" target="_blank") #[i(class="fab fa-twitter")]
+                        a(href="http://dribble.com" class="facebook" target="_blank") #[i(class="fas fa-basketball-ball")]
+                        a(href="http://pinterest.com" class="facebook" target="_blank") #[i(class="fab fa-pinterest")]
+                        a(href="http://instagram.com" class="facebook" target="_blank") #[i(class="fab fa-instagram")]
+            
+        //**************************
+        //==========================
+        //      START NAV BAR
+        //==========================
+        //**************************
+        nav
+            .container
+                .row
+                    .bars.col
+                        i(class="fas fa-bars")
+
+                    .nav-links.col-12.col-lg-9.text-right
+                        .wrapper
+                            ul 
+
+                                //=============
+                                // one link 
+                                //==============
+                                li(class="link") 
+                                    a(href="../index.html") الصفحة الرئيسيه
+
+                                //=============
+                                // one link 
+                                //==============
+                                li(data-class=".courses").link
+                                    a(href="courses.html") <i class="fas fa-chevron-down"></i>  الكورسات
+                                    .box.courses
+                                        ul
+                                            //=============
+                                            // sublinks
+                                            //==============
+                                            li #[a(href="#") الكورس الاول]
+                                            li #[a(href="#") الكورس الثاني]
+                                            li #[a(href="#") الكورس الثالث]
+
+                                //=============
+                                // one link 
+                                //==============
+                                li(data-class=".news").link
+                                    a(href="#") <i class="fas fa-chevron-down"></i>  اخر الاخبار
+                                    .box.news
+                                        ul
+                                            //=============
+                                            // sublinks
+                                            //==============
+                                            li #[a(href="#") الخبر الاول]
+                                            li #[a(href="#") الخبر الثاني]
+                                            li #[a(href="#") الخبر الثالث]
+
+                                //=============
+                                // one link 
+                                //==============
+                                li(data-class=".elements").link
+                                    a(href="#") <i class="fas fa-chevron-down"></i>  العناصر 
+                                    .box.elements
+                                        ul
+                                            //=============
+                                            // sublinks
+                                            //==============
+                                            li #[a(href="#") العنصر الاول]
+                                            li #[a(href="#") العنصر الثاني]
+                                            li #[a(href="#") العنصر الثالث]
+                                
+                                //=============
+                                // one link 
+                                //==============
+                                li.link.active 
+                                    a(href="content.html") المحتوي
+
+                                //=============
+                                // one link 
+                                //==============
+                                li.link
+                                    a(href="contact.html") اتصل بنا
+                                li.link.search
+                                    form(dir="rtl")
+                                        input(type="search" placeholder="ابحث")
+                    .brand.col-3
+                        .img
+                            img(class="img-fluid" src="../images/logo-1.png")
+    
+
+block body
+
+    //**************************
+    //==========================
+    //      START   DESC
+    //==========================
+    //**************************
+    section.top-desc.text-right
+        .overlay
+        .container
+            h3 اصنع اقوي التطبيقات في مجال البرمجة
+    
+    //**************************
+    //==========================
+    //      PRICE BOX
+    //==========================
+    //**************************
+    section.content.text-right
+        .container
+            .row
+                .col-12.col-md-3.order-2.order-md-0
+                    .holder
+                        .price-box
+                            h4 السعر
+                            h5 $55.00
+                            a(href="#") اشتري هذه الدورة
+                .col-12.col-md-9
+                    .img
+                        img(src="../images/content-1.jpg", alt="#").img-fluid
+                    .text
+                        p نوفر في إدراك مساقات تعليمية مجانية تقدم عبر الإنترنت عبر خبراء عالميين. كما نوفر أيضاً مساقات مترجمة مبنية على مساقات تقدم في جامعة هارفرد الأمريكية ومعهد ماستشوستس للتكنولوجيا. كل ما تحتاجه هو جهاز كمبيوتر و انترنت للبدء بالتعلم مجاناً عن بعد. كما ويمكنك التسجيل مجاناً عبر اختيار المساق الذي يناسبك عبر موقعنا الإلكتروني  نوفر في إدراك مساقات تعليمية مجانية تقدم عبر الإنترنت عبر خبراء عالميين. كما نوفر أيضاً مساقات مترجمة مبنية على مساقات تقدم في جامعة هارفرد الأمريكية ومعهد ماستشوستس للتكنولوجيا. كل ما تحتاجه هو جهاز كمبيوتر و انترنت للبدء بالتعلم مجاناً عن بعد. كما ويمكنك التسجيل مجاناً عبر اختيار المساق الذي يناسبك عبر موقعنا الإلكتروني
+
+    //**************************
+    //==========================
+    //       COURSES 
+    //==========================
+    //**************************
+    section.course
+        .container 
+            h2.text-center دورات قد تعجبك
+            .row.justify-content-end
+                .related-courses.col-12.col-md-9
+                    .course-item.text-right
+                        div(class="card")
+                            .card-img-top
+                                img(src="../images/course1.jpg" class="w-100" alt="#")
+                                .price
+                                    span $56.00
+                                .overlay
+                                .browse
+                                    a(href="#") #[i(class="fa fa-link")]
+                            div.card-body
+                                a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                                p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                            .card-footer
+                                .person
+                                    img(src="../images/person1.jpg" class="w-100" alt="#")
+                                    .name
+                                        span David Austin
+                                .info
+                                    span 54
+                                    i.fas.fa-heart
+                    .course-item.text-right
+                        div(class="card")
+                            .card-img-top
+                                img(src="../images/course2.jpg" class="w-100" alt="#")
+                                .price
+                                    span $56.00
+                                .overlay
+                                .browse
+                                    a(href="#") #[i(class="fa fa-link")]
+                            div.card-body
+                                a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                                p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                            .card-footer
+                                .person
+                                    img(src="../images/person1.jpg" class="w-100" alt="#")
+                                    .name
+                                        span David Austin
+                                .info
+                                    span 54
+                                    i.fas.fa-heart
+                    .course-item.text-right
+                        div(class="card")
+                            .card-img-top
+                                img(src="../images/course3.jpg" class="w-100" alt="#")
+                                .price
+                                    span $56.00
+                                .overlay
+                                .browse
+                                    a(href="#") #[i(class="fa fa-link")]
+                            div.card-body
+                                a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                                p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                            .card-footer
+                                .person
+                                    img(src="../images/person1.jpg" class="w-100" alt="#")
+                                    .name
+                                        span David Austin
+                                .info
+                                    span 54
+                                    i.fas.fa-heart
+                    .course-item.text-right
+                        div(class="card")
+                            .card-img-top
+                                img(src="../images/course4.jpg" class="w-100" alt="#")
+                                .price
+                                    span $56.00
+                                .overlay
+                                .browse
+                                    a(href="#") #[i(class="fa fa-link")]
+                            div.card-body
+                                a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                                p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                            .card-footer
+                                .person
+                                    img(src="../images/person1.jpg" class="w-100" alt="#")
+                                    .name
+                                        span David Austin
+                                .info
+                                    span 54
+                                    i.fas.fa-heart
+                    .course-item.text-right
+                        div(class="card")
+                            .card-img-top
+                                img(src="../images/course5.jpg" class="w-100" alt="#")
+                                .price
+                                    span $56.00
+                                .overlay
+                                .browse
+                                    a(href="#") #[i(class="fa fa-link")]
+                            div.card-body
+                                a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                                p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                            .card-footer
+                                .person
+                                    img(src="../images/person1.jpg" class="w-100" alt="#")
+                                    .name
+                                        span David Austin
+                                .info
+                                    span 54
+                                    i.fas.fa-heart
+block append script
+    script.
+        $('.related-courses').slick({
+            dots: false,
+            autoplay: false,
+            autoplaySpeed: 1000,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            nextArrow: '<i class="fa fa-arrow-right"></i>',
+            prevArrow: '<i class="fa fa-arrow-left"></i>',      
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]        
+        });
+                 

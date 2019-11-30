@@ -1,0 +1,250 @@
+/*
+=======================
+===== global style ====
+=======================
+*/
+a {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  outline: 0 !important;
+  font-family: "Cairo", sans-serif;
+}
+
+/*===============
+    start  placeholder
+===============*/
+.scroll-top, .button {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/*************
+    body
+*************/
+body {
+  position: relative;
+}
+
+/*************
+    ul
+*************/
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/*************
+    a (link)
+*************/
+a {
+  outline: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.capitlize {
+  text-transform: uppercase;
+}
+
+/*************
+    button
+*************/
+.button {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  background: rgba(81, 181, 242, 0.94);
+  border-radius: 4px;
+  color: black;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.button:hover {
+  background: #03619af0;
+  color: white;
+}
+
+.scroll-top {
+  display: none;
+  cursor: pointer;
+  background-color: rgba(81, 181, 242, 0.94);
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  color: #110133;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 30;
+}
+.scroll-top:hover {
+  background-color: #03619af0;
+}
+@media (max-width: 991px) {
+  .scroll-top {
+    padding: 15px;
+    font-size: 17px;
+  }
+  .scroll-top:hover {
+    background: #03619af0;
+    color: white;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font-size: 26px;
+  }
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/*
+=======================
+===== start desc ====
+=======================
+*/
+.top-desc {
+  background: url(../images/content-bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+}
+.top-desc .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.top-desc .container {
+  position: relative;
+  padding: 100px 30px;
+  z-index: 10;
+}
+
+/*
+=======================
+===== start content ====
+=======================
+*/
+.content {
+  padding: 100px 0;
+}
+.content .row .holder {
+  border: 1px solid #d6d6d6;
+  padding: 30px;
+}
+.content .row .holder .price-box h4 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 5px;
+}
+.content .row .holder .price-box h4::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  height: 3px;
+  width: 40px;
+  background: rgba(81, 181, 242, 0.94);
+}
+.content .row .holder .price-box h5 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.content .row .holder .price-box a {
+  background-color: rgba(81, 181, 242, 0.94);
+  border: 2px solid rgba(81, 181, 242, 0.94);
+  display: block;
+  padding: 18px 0;
+  margin-top: 25px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  width: 100%;
+}
+.content .row .holder .price-box a:hover {
+  background: transparent;
+}
+.content .row .text {
+  margin: 40px 0;
+}
+
+/*
+=======================
+===== start related courses ====
+=======================
+*/
+.course .container {
+  position: relative;
+}
+.course .container h2 {
+  position: absolute;
+  right: 25px;
+  top: -11px;
+}
+@media (max-width: 767px) {
+  .course .container h2 {
+    top: -5px;
+  }
+}
+.course .container .related-courses {
+  display: flex;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+}
+.course .container .related-courses [class*=fa-arrow] {
+  margin-bottom: 20px;
+}
+.course .container .related-courses .fa-arrow-left {
+  margin-left: 10px;
+}
+.course .container .related-courses .slick-list {
+  order: 1;
+}
+
+/*# sourceMappingURL=content.css.map */

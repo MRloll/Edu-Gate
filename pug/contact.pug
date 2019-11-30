@@ -1,0 +1,278 @@
+doctype
+html
+    head
+        meta(charset="UTF-8")
+        meta(meta name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="keywords" content="HTML,CSS,XML,JavaScript")
+        meta(name="author" content="MR. Loll")
+        block the-title
+            title EduGate - Contact Us
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Cairo&display=swap")
+        link(rel="stylesheet" href="../css/all.min.css" type="text/css")
+        link(rel="stylesheet" href="../css/bootstrap.min.css" type="text/css")
+        link(rel="stylesheet" href="../css/animate.css" type="text/css")
+        link(rel="stylesheet" href="../css/slick.css" type="text/css")
+        link(rel="stylesheet" href="../css/jquery.fancybox.min.css" type="text/css")
+        block stylesheet
+            link(rel="stylesheet" href="../css/app.css" type="text/css")
+        block style
+            style.
+                .felx {width: 100%}
+                .contact-form form .form-group:first-of-type{margin-left: 50px}
+                .contact-form form .form-group {width: 50%}
+                input[type="submit"] {margin}
+                @media (max-width: 576px) {
+                    form {
+                        margin-top:0;
+                    }
+                }
+    body
+        block header
+            //**************************
+            //==========================
+            //       START HEADER
+            //==========================
+            //**************************
+            header
+                .top-nav.d-none.d-md-block
+                    .container
+                        .row
+                            .contact.col-12.col-lg-6.text-center.text-lg-left
+                                .mail                            
+                                    a(href="mailto:walidelloll2018@gmail.com") #[i(class="far fa-envelope")] walidelloll2018@gmail.com
+                                .phone
+                                    i(class="fas fa-phone")
+                                    span +201005037275
+                            .social.col-12.col-lg-6.text-center.text-lg-right
+                                a(href="http://facebook.com" class="facebook" target="_blank") #[i(class="fab fa-facebook-f")]
+                                a(href="http://google.com" class="facebook" target="_blank") #[i(class="fab fa-google-plus-g")]
+                                a(href="http://twitter.com" class="facebook" target="_blank") #[i(class="fab fa-twitter")]
+                                a(href="http://dribble.com" class="facebook" target="_blank") #[i(class="fas fa-basketball-ball")]
+                                a(href="http://pinterest.com" class="facebook" target="_blank") #[i(class="fab fa-pinterest")]
+                                a(href="http://instagram.com" class="facebook" target="_blank") #[i(class="fab fa-instagram")]
+                    
+                //**************************
+                //==========================
+                //      START NAV BAR
+                //==========================
+                //**************************
+                nav
+                    .container
+                        .row
+                            .bars.col
+                                <i class="fas fa-bars"></i>
+
+                            .nav-links.col-12.col-lg-9.text-right
+                                .wrapper
+                                    ul 
+
+                                        //=============
+                                        // one link 
+                                        //==============
+                                        li(class="link") 
+                                            a(href="../index.html") الصفحة الرئيسيه
+                                        
+                                        block change-active
+                                            //=============
+                                            // one link 
+                                            //==============
+                                            li(data-class=".courses").link 
+                                                a(href="courses.html") <i class="fas fa-chevron-down"></i>  الكورسات
+                                                .box.courses
+                                                    ul
+                                                        //=============
+                                                        // sublinks
+                                                        //==============
+                                                        li #[a(href="#") الكورس الاول]
+                                                        li #[a(href="#") الكورس الثاني]
+                                                        li #[a(href="#") الكورس الثالث]
+
+                                        //=============
+                                        // one link 
+                                        //==============
+                                        li(data-class=".news").link
+                                            a(href="#") <i class="fas fa-chevron-down"></i>  اخر الاخبار
+                                            .box.news
+                                                ul
+                                                    //=============
+                                                    // sublinks
+                                                    //==============
+                                                    li #[a(href="#") الخبر الاول]
+                                                    li #[a(href="#") الخبر الثاني]
+                                                    li #[a(href="#") الخبر الثالث]
+
+                                        //=============
+                                        // one link 
+                                        //==============
+                                        li(data-class=".elements").link
+                                            a(href="#") <i class="fas fa-chevron-down"></i>  العناصر 
+                                            .box.elements
+                                                ul
+                                                    //=============
+                                                    // sublinks
+                                                    //==============
+                                                    li #[a(href="#") العنصر الاول]
+                                                    li #[a(href="#") العنصر الثاني]
+                                                    li #[a(href="#") العنصر الثالث]
+                                        
+                                        //=============
+                                        // one link 
+                                        //==============
+                                        li.link
+                                            a(href="content.html") المحتوي
+                                        
+                                        block old-active
+                                            //=============
+                                            // one link 
+                                            //==============
+                                            li.link.active
+                                                a(href="contact.html") اتصل بنا
+                                        li.link.search
+                                            form(dir="rtl")
+                                                input(type="search" placeholder="ابحث")
+                            .brand.col-3
+                                .img
+                                    img(class="img-fluid" src="../images/logo-1.png")
+        
+        //**************************
+        //==========================
+        //  START CONTACT FORM
+        //==========================
+        //**************************
+        block body
+            section.contact-form
+                .overlay
+                .container
+                    .row
+                        form(action="#" dir="rtl").col.text-center
+                            .text.text-center
+                                h2 اتصل بنا
+                            div.flex
+                                .form-group
+                                    input(type="text" name='username' placeholder="الاسم").input
+                                    p.alert.alert-danger  هذا الحقل ضروري
+                                .form-group                            
+                                    input(type="text" name='surname' placeholder="اللقب").input
+                                    p.alert.alert-danger هذا الحقل ضروري
+                            div.flex
+                                .form-group
+                                    input(type="email" name='email' placeholder="البريد الالكتروني").email
+                                    p.alert.alert-danger هذا الحقل ضروري
+                                .form-group                            
+                                    input(type="text" name='subject' placeholder="الموضوع").input
+                                    p.alert.alert-danger هذا الحقل ضروري
+                            textarea(name="message", cols="20" placeholder="الرسالة").input
+                            p.alert.alert-danger هذا الحقل ضروري
+                            input(type="submit" value="ارسال").btn.btn-block
+                            .loader.text-center
+                                img(src="../images/ajax-loader.gif", alt="")
+                            p.alert.alert-danger يوجد خطا في حقل او اكثر , من فضلك اعد المحاولة.
+                            p.alert.alert-primary لقد تم ارسال طلبك بنجاح , شكرا لك !
+
+            //**************************
+            //==========================
+            //  START FOOTER
+            //==========================
+            //**************************
+        footer.text-right
+            .container
+                .row
+                    //=========
+                    //start brand and social
+                    //=========
+                    div(class="order-sm-0 order-md-2 order-lg-0 col-md-6 col-lg-3")
+                        .heading
+                            img(src="../images/logo-1.png")
+                            p تم تصميم اديو جيت لاتمام عمليتك التعليمية في اي مجال بكامل الكفائه المطلوبة
+                        .description
+                            .location
+                                p المنصوره , شارع احمد ماهر #[i(class="fas fa-home") ]
+                                p +201005037275 #[i(class="fas fa-phone")]
+                                p #[a(href="mailto:edu@gate.com") edu@gate.com] #[i(class="fas fa-envelope")]
+                                
+                            .social
+                                div
+                                    a(href="#" target="_blank") #[i(class="fab fa-facebook-f")]
+                                    a(href="#" target="_blank") #[i(class="fab fa-google-plus-g")]
+                                    a(href="", target="_blank") #[i(class="fab fa-twitter")]
+                    //=========
+                    //start useful links
+                    //=========
+                    div(class="order-sm-0 order-md-1 order-lg-0  col-md-6  col-lg-2 links")
+                        .heading
+                            h5 روابط مهمة
+                        ul
+                            li #[a(href="#") حول]
+                            li #[a(href="#") F.A.Q]
+                            li #[a(href="#") المعرض]
+                            li #[a(href="#") المنتدي]
+                            li #[a(href="#") المحادثه]
+
+
+
+                    //=========
+                    //start footer blogs
+                    //=========
+                    div(class="order-sm-0 order-md-2 order-lg-0 col-md-6 col-lg-3")
+                        .heading
+                            h5 الدورات
+                        .blogs
+                            //one blog
+                            .blog
+                                .img 
+                                    img(src="../images/footer-course1.jpg")
+                                .desc
+                                    p #[a(href="#") تعلم الوردبريس] 
+                            //one blog
+                            .blog
+                                .img 
+                                    img(src="../images/footer-course2.jpg")
+                                .desc
+                                    p #[a(href="#") #[bdi sass] تعلم لغة]
+                            //one blog
+                            .blog
+                                .img 
+                                    img(src="../images/footer-course3.jpg")
+                                .desc
+                                    p #[a(href="#") #[bdi PHP] احترف]
+                    //=========
+                    //start gallery pics
+                    //=========
+                    div(class="order-sm-0 order-md-2 order-lg-0 col-md-6 col-lg-4")
+                        .heading
+                            h5 المعرض
+                        .footer-gallery
+                            a(href="../images/gallery-lg1.jpg" data-fancybox="gallery") #[img(src="../images/gallery1.jpg")]
+                            a(href="../images/gallery-lg2.jpg" data-fancybox="gallery") #[img(src="../images/gallery2.jpg")]
+                            a(href="../images/gallery-lg3.jpg" data-fancybox="gallery") #[img(src="../images/gallery3.jpg")]
+                            a(href="../images/gallery-lg4.jpg" data-fancybox="gallery") #[img(src="../images/gallery4.jpg")]
+                            a(href="../images/gallery-lg5.jpg" data-fancybox="gallery") #[img(src="../images/gallery5.jpg")]
+                            a(href="../images/gallery-lg6.jpg" data-fancybox="gallery") #[img(src="../images/gallery6.jpg")]
+                            a(href="../images/gallery-lg7.jpg" data-fancybox="gallery") #[img(src="../images/gallery7.jpg")]
+                            a(href="../images/gallery-lg8.jpg" data-fancybox="gallery") #[img(src="../images/gallery8.jpg")]
+                            a(href="../images/gallery-lg9.jpg" data-fancybox="gallery") #[img(src="../images/gallery9.jpg")]
+                .copy
+                    p All rights are reserved &copy; 2019 EduGate 
+        
+        i(class="scroll-top fas fa-chevron-up")
+    block script
+        script(src="../js/jQuery-3-4-1.min.js")
+        script(src="../js/wow.min.js")
+        script(src="../js/bootstrap.min.js")
+        script(src="../js/slick.min.js")
+        script(src="../js/jquery.fancybox.min.js")
+        script(src="../js/app.js")
+        script.
+            $(document).ready(function () {
+            
+                $(window).on('scroll', function () {
+            
+                    //showing the scroll top button
+                    if($(window).scrollTop() > 200) {
+                        $('.scroll-top').fadeIn();
+                    }else {
+                        $('.scroll-top').fadeOut();
+                    }
+                });
+            });
+

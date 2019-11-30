@@ -1,0 +1,352 @@
+extends contact.pug
+block the-title
+    title Courses
+block append stylesheet
+    link(rel="stylesheet" href="../css/courses.css" type="text/css")
+block style      
+
+block change-active
+    //=============
+    // one link 
+    //==============
+    li(data-class=".courses").link.active
+        a(href="courses.html") <i class="fas fa-chevron-down"></i>  الكورسات
+        .box.courses
+            ul
+                //=============
+                // sublinks
+                //==============
+                li #[a(href="#") الكورس الاول]
+                li #[a(href="#") الكورس الثاني]
+                li #[a(href="#") الكورس الثالث]
+
+block old-active
+    //=============
+    // one link 
+    //==============
+    li.link
+        a(href="contact.html") اتصل بنا
+
+
+block body
+    //**************************
+    //==========================
+    //       COURSES lists
+    //==========================
+    //**************************
+    section.course.courses-list
+        h1.text-center دوراتنا التعليميه
+        .container 
+            aside.text-right.d-none.d-lg-block
+                h3.text-center احدث الدورات
+                .holder
+                    .card
+                        img(src="../images/course3.jpg", alt="#").img-fluid
+                        .card-body
+                            div
+                                i(class="far fa-eye")
+                                span 540
+                            a(href="#") #[span دورة الادارة]
+                    .card
+                        img(src="../images/course3.jpg", alt="#").img-fluid
+                        .card-body
+                            div
+                                i(class="far fa-eye")
+                                span 540
+                            a(href="#") #[span دورة الادارة]
+                    .card
+                        img(src="../images/course3.jpg", alt="#").img-fluid
+                        .card-body
+                            div
+                                i(class="far fa-eye")
+                                span 540
+                            a(href="#") #[span دورة الادارة]
+            .row
+                .course-item.text-right.col-12.col-sm-6.col-lg-6.col-xl-4
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course3.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+                .course-item.text-right.col-12.col-sm-6.col-lg-6.col-xl-4
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course4.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+                .course-item.text-right.col-12.col-sm-6.col-lg-6.col-xl-4
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course5.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+                .course-item.text-right.col-12.col-sm-6.col-lg-6.col-xl-4
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course3.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+                .course-item.text-right.col-12.col-sm-6.col-md-6.col-xl-4
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course4.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+                .course-item.text-right.col-12.col-sm-6.col-lg-6.col-xl-4
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course5.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+    //**************************
+    //==========================
+    //      SLIDE COURSES
+    //==========================
+    //**************************
+    section.course.course-slide
+        .container 
+            h2.text-center دورات قد تعجبك
+            .row
+                .course-item
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course1.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+                .course-item
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course2.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+                .course-item
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course3.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+                .course-item
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course4.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+                .course-item
+                    div(class="card")
+                        .card-img-top
+                            img(src="../images/course5.jpg" class="w-100" alt="#")
+                            .price
+                                span $56.00
+                            .overlay
+                            .browse
+                                a(href="#") #[i(class="fa fa-link")]
+                        div.card-body
+                            a(href="#") #[h5.card-title اصنع اقوي التطبيقات]
+                            p.card-text في هذا الكورس سوف تتعلم بناء اجمل التطبيقات في عالم الانترنت , ومن خلال هذه الدوره التعليميه سوف تصبح خبيرا في هذا المجال
+                        .card-footer
+                            .person
+                                img(src="../images/person1.jpg" class="w-100" alt="#")
+                                .name
+                                    span David Austin
+                            .info
+                                span 54
+                                i.fas.fa-heart
+block append script
+    script.
+        $('.course-slide .row ').slick({
+            dots: false,
+            autoplay: false,
+            autoplaySpeed: 1000,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            nextArrow: '<i class="fa fa-arrow-right"></i>',
+            prevArrow: '<i class="fa fa-arrow-left"></i>',      
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]        
+        });
+
+        $('.courses-list aside .holder ').slick({
+            dots: false,
+            autoplay: false,
+            autoplaySpeed: 1000,
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            vertical: true,
+            verticalSwiping: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]        
+        });
+                 
