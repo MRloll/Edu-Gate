@@ -68,13 +68,22 @@ header {
                     ul {
                         position: relative;
                         li.search{
-                            input {
-                                height: 30px;
-                                width: 125px;
-                                display: inline-block;
-                                border: 1px solid #ccc;
-                                border-radius: 5px;
-                                padding-right: 10px;
+                            form {
+                                position: relative;
+                                input {
+                                    height: 30px;
+                                    width: 125px;
+                                    display: inline-block;
+                                    border: 1px solid $secColor;
+                                    border-radius: 0px;
+                                    padding-right: 10px;
+                                }
+                                .fa-search {
+                                    position: absolute;
+                                    left: 7px;
+                                    top: 18px;
+                                    color: $secColor;
+                                }
                             }
                         }
                         li.link {
@@ -388,6 +397,7 @@ header {
         margin: 10px;
         cursor: grab;
         .card {
+            background: white;
             border: 1px solid #ccc;
             padding: 3px;
         }

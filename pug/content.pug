@@ -129,13 +129,38 @@ block body
     section.content.text-right
         .container
             .row
-                .col-12.col-md-3.order-2.order-md-0
+                .col-12.col-md-4.order-2.order-md-0
                     .holder
                         .price-box
                             h4 السعر
                             h5 $55.00
                             a(href="#") اشتري هذه الدورة
-                .col-12.col-md-9
+                    .latest-courses
+                        h4 احدث الدورات
+                        .wrapper
+                            //one blog
+                            .blog
+                                .img 
+                                    img(src="../images/footer-course1.jpg")
+                                .desc
+                                    p #[a(href="#") تعلم الوردبريس]
+                                    span October 22, 2017
+                            //one blog
+                            .blog
+                                .img 
+                                    img(src="../images/footer-course2.jpg")
+                                .desc
+                                    p #[a(href="#") #[bdi sass] تعلم لغة]
+                                    span October 22, 2017
+                            //one blog
+                            .blog
+                                .img 
+                                    img(src="../images/footer-course3.jpg")
+                                .desc
+                                    p #[a(href="#") #[bdi PHP] احترف]
+                                    span October 22, 2017
+
+                .right-content.col-12.col-md-8
                     .img
                         img(src="../images/content-1.jpg", alt="#").img-fluid
                     .text
@@ -150,7 +175,7 @@ block body
         .container 
             h2.text-center دورات قد تعجبك
             .row.justify-content-end
-                .related-courses.col-12.col-md-9
+                .related-courses.col-12.col-md-8
                     .course-item.text-right
                         div(class="card")
                             .card-img-top

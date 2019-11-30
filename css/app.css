@@ -197,13 +197,22 @@ header nav .container .row .nav-links {
 header nav .container .row .nav-links ul {
   position: relative;
 }
-header nav .container .row .nav-links ul li.search input {
+header nav .container .row .nav-links ul li.search form {
+  position: relative;
+}
+header nav .container .row .nav-links ul li.search form input {
   height: 30px;
   width: 125px;
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid rgba(81, 181, 242, 0.94);
+  border-radius: 0px;
   padding-right: 10px;
+}
+header nav .container .row .nav-links ul li.search form .fa-search {
+  position: absolute;
+  left: 7px;
+  top: 18px;
+  color: rgba(81, 181, 242, 0.94);
 }
 header nav .container .row .nav-links ul li.link {
   float: right;
@@ -534,6 +543,7 @@ header nav .container .row .bars {
   cursor: grab;
 }
 .course .course-item .card {
+  background: white;
   border: 1px solid #ccc;
   padding: 3px;
 }

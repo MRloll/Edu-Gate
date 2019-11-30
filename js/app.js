@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+    //hiding the search icon on focus
+    $('input[type="search"]').on('focus', function() {
+        $(this).next('i').fadeOut()
+    });
+
+    $('input[type="search"]').on('blur', function() {
+        $(this).next('i').fadeIn()
+    });
 
     /*
     **********************

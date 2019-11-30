@@ -1,7 +1,7 @@
 @import "_helpers.scss";
 @import "_layout.scss";
 body {
-    background-color: #f5f5f5;
+    background-color: #efefef;
 }
 
 /*
@@ -35,47 +35,91 @@ body {
 .content {
     padding: 100px 0;
     .row {
-        .holder {
-            border: 1px solid #d6d6d6;
-            padding: 30px;
-            .price-box {
-                h4 {
-                    font-size: 2rem;
-                    margin-bottom: 30px;
-                    position: relative;
-                    padding-bottom: 5px;
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        bottom: -10px;
-                        right: 0;
-                        height: 3px;
-                        width: 40px;
-                        background: $secColor;
+        div {
+            .holder {
+                background: white;
+                border: 1px solid #d6d6d6;
+                padding: 30px;
+                margin-bottom: 30px;
+                .price-box {
+                    h4 {
+                        font-size: 2rem;
+                        margin-bottom: 30px;
+                        position: relative;
+                        padding-bottom: 5px;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -10px;
+                            right: 0;
+                            height: 3px;
+                            width: 40px;
+                            background: $secColor;
+                        }
                     }
-                }
-                h5 {
-                    font-size: 2rem;
+                    h5 {
+                        font-size: 2rem;
+                        margin-bottom: 30px;
+                    }
+                    a {
+                        background-color: $secColor;
+                        border: 2px solid $secColor;
+                        display: block;
+                        padding: 18px 0;
+                        margin-top: 25px;
+                        text-align: center;
+                        -webkit-transition: all .3s ease-out 0s;
+                        transition: all .3s ease-out 0s;
+                        width: 100%;
+                        &:hover {
+                            background: transparent;
+                        }                               
+                    }
+                }    
+            }
+            .latest-courses {
+                background: white;
+                border: 1px solid #d6d6d6;
+                padding: 30px;
+                h4 {
+                    background-color: $secColor;
+                    text-align: center;
+                    padding: 10px;
                     margin-bottom: 30px;
                 }
-                a {
-                    background-color: $secColor;
-                    border: 2px solid $secColor;
-                    display: block;
-                    padding: 18px 0;
-                    margin-top: 25px;
-                    text-align: center;
-                    -webkit-transition: all .3s ease-out 0s;
-                    transition: all .3s ease-out 0s;
-                    width: 100%;
-                    &:hover {
-                        background: transparent;
-                    }                               
+                .wrapper {
+                    .blog {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        &:not(:last-of-type) {
+                            margin-bottom: 20px;
+                        }
+                        @media #{$minSmall} {
+                            display: block;
+                            text-align: center;
+                        } 
+                        @media #{$minMedium} {
+                            display: flex;
+                            text-align: right;
+                        } 
+                        .img {
+                            margin-left: 10px;
+                        }
+                        .desc a {
+                            &:hover {
+                                color: $secColor;
+                            }
+                        }
+                    }
                 }
             }    
         }
-        .text {
-            margin: 40px 0;
+        .right-content {
+            background: white;
+            padding-top: 15px;
+            .text {
+                margin: 40px;
+            }    
         }
     }
 }
